@@ -1,0 +1,329 @@
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    background:#ffffff;
+    color:#222;
+}
+
+/* NAVBAR */
+
+.navbar{
+    position:fixed;
+    top:0;
+    width:100%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:20px 8%;
+    background:rgba(15,40,30,0.85);
+    backdrop-filter:blur(10px);
+    z-index:1000;
+}
+
+.logo{
+    color:#d4af37;
+    font-size:24px;
+    font-weight:700;
+    letter-spacing:1px;
+}
+
+.nav-links{
+    display:flex;
+    list-style:none;
+    gap:30px;
+}
+
+.nav-links a{
+    text-decoration:none;
+    color:white;
+    font-weight:500;
+    transition:.3s;
+}
+
+.nav-links a:hover{
+    color:#d4af37;
+}
+
+/* HERO */
+
+.hero{
+    min-height:100vh;
+
+    background:
+    linear-gradient(
+        rgba(0,0,0,0.55),
+        rgba(0,0,0,0.55)
+    ),
+    url("https://www.savannaseasons.com/wp-content/uploads/2025/06/Savanna-seasons-05-E-BROCHURE-4-1536x1109.jpg");
+
+    background-size:cover;
+    background-position:center center;
+    background-repeat:no-repeat;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+
+    position:relative;
+}
+/*.hero{
+    height:100vh;
+    background:
+    linear-gradient(
+        rgba(0,0,0,0.45),
+        rgba(0,0,0,0.45)
+    ),
+    url("images/hero.jpg");
+
+    background-size:cover;
+    background-position:center;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+}*/
+
+.hero-overlay{
+    color:#ffffff;
+    max-width:850px;
+    background:rgba(0,0,0,0.35);
+    padding:40px;
+    border-radius:20px;
+    backdrop-filter:blur(5px);
+}
+
+.hero h1{
+    font-size:72px;
+    font-weight:700;
+    line-height:1.1;
+    margin-bottom:25px;
+    color:#ffffff;
+    text-shadow:
+        2px 2px 10px rgba(0,0,0,0.9),
+        0 0 25px rgba(0,0,0,0.8);
+}
+
+.hero p{
+    font-size:24px;
+    margin-bottom:40px;
+    color:#f5f5f5;
+    text-shadow:
+        2px 2px 8px rgba(0,0,0,0.9);
+}
+
+/* BUTTONS */
+
+.hero-buttons{
+    display:flex;
+    justify-content:center;
+    gap:20px;
+    flex-wrap:wrap;
+}
+
+.btn-primary{
+    background:#d4af37;
+    color:#111;
+    text-decoration:none;
+    padding:15px 32px;
+    border-radius:8px;
+    font-weight:600;
+}
+
+.btn-secondary{
+    border:2px solid white;
+    color:white;
+    text-decoration:none;
+    padding:15px 32px;
+    border-radius:8px;
+}
+
+/* SECTIONS */
+
+section{
+    padding:100px 8%;
+}
+
+.section-title{
+    text-align:center;
+    margin-bottom:50px;
+}
+
+.section-title h2{
+    font-size:42px;
+    color:#173d2c;
+}
+
+.about-text{
+    max-width:900px;
+    margin:auto;
+    text-align:center;
+    font-size:18px;
+    line-height:1.9;
+}
+
+/* AMENITIES */
+
+.amenity-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:25px;
+}
+
+.card{
+    background:white;
+    padding:40px;
+    text-align:center;
+    border-radius:15px;
+    box-shadow:0 8px 25px rgba(0,0,0,.08);
+    transition:.3s;
+    font-size:18px;
+}
+
+.card:hover{
+    transform:translateY(-8px);
+}
+
+/* GALLERY */
+
+.gallery-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+    gap:20px;
+}
+
+.gallery-grid img{
+    width:100%;
+    border-radius:15px;
+    transition:.4s;
+    cursor:pointer;
+}
+
+.gallery-grid img:hover{
+    transform:scale(1.03);
+}
+
+/* LOCATION */
+
+.location-wrapper{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:50px;
+    align-items:center;
+}
+
+.location-text h2{
+    font-size:42px;
+    margin-bottom:20px;
+    color:#173d2c;
+}
+
+.location-text p{
+    line-height:1.8;
+    margin-bottom:25px;
+}
+
+.map-container{
+    overflow:hidden;
+    border-radius:20px;
+    box-shadow:0 10px 30px rgba(0,0,0,.15);
+}
+
+.map-container iframe{
+    width:100%;
+    height:450px;
+    border:none;
+}
+
+/* FORM */
+
+form{
+    max-width:700px;
+    margin:auto;
+}
+
+input,
+textarea{
+    width:100%;
+    padding:18px;
+    margin-bottom:20px;
+    border:1px solid #ddd;
+    border-radius:10px;
+}
+
+button{
+    width:100%;
+    padding:18px;
+    background:#173d2c;
+    color:white;
+    border:none;
+    border-radius:10px;
+    font-size:16px;
+    cursor:pointer;
+}
+
+/* FOOTER */
+
+footer{
+    background:#0f281e;
+    color:white;
+    text-align:center;
+    padding:50px 20px;
+}
+
+footer h3{
+    color:#d4af37;
+    margin-bottom:20px;
+}
+
+.developer{
+    margin-top:20px;
+    color:#d4af37;
+}
+
+/* WHATSAPP */
+
+.whatsapp{
+    position:fixed;
+    right:20px;
+    bottom:20px;
+    width:65px;
+    height:65px;
+    border-radius:50%;
+    background:#25D366;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:30px;
+    text-decoration:none;
+}
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+.hero h1{
+    font-size:42px;
+}
+
+.location-wrapper{
+    grid-template-columns:1fr;
+}
+
+.nav-links{
+    display:none;
+}
+
+}
+
